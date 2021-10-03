@@ -14,21 +14,21 @@
 [ext_resource path="res://sounds/random.wav" type="AudioStream" id=12]
 [ext_resource path="res://art/untitled.ogg" type="AudioStream" id=13]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 127.518 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 356.373, 10 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 12
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 12
 font_data = ExtResource( 7 )
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=5]
 code = "/*
 Shader from Godot Shaders - the free shader library.
 godotshaders.com/shader/VHS-and-CRT-monitor-effect
@@ -259,8 +259,8 @@ void fragment()
 	COLOR = text;
 }"
 
-[sub_resource type="ShaderMaterial" id=4]
-shader = SubResource( 3 )
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
 shader_param/overlay = true
 shader_param/scanlines_opacity = 0.2
 shader_param/scanlines_width = 0.25
@@ -283,14 +283,14 @@ shader_param/clip_warp = false
 shader_param/vignette_intensity = 0.4
 shader_param/vignette_opacity = 0.0
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 29
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 size = 10
 font_data = ExtResource( 7 )
 
@@ -342,19 +342,19 @@ position = Vector2( 194.028, 61.7361 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
 position = Vector2( -12.918, 86.8626 )
-shape = SubResource( 8 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
 position = Vector2( 334.532, 86.8626 )
-shape = SubResource( 8 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="walls"]
 position = Vector2( 104.235, 17.1078 )
-shape = SubResource( 9 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="walls"]
 position = Vector2( 104.235, 199.116 )
-shape = SubResource( 9 )
+shape = SubResource( 2 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -369,7 +369,7 @@ margin_top = 4.64645
 margin_right = 494.921
 margin_bottom = 44.6464
 rect_scale = Vector2( 0.6, 0.6 )
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "points:"
 text = "points:"
@@ -405,7 +405,7 @@ margin_left = 33.0
 margin_top = -9.5
 margin_right = -34.0
 margin_bottom = 9.5
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "preess ESC to resume"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -418,7 +418,7 @@ volume_db = -6.0
 [node name="ShaderLayer" type="CanvasLayer" parent="."]
 
 [node name="shader" type="ColorRect" parent="ShaderLayer"]
-material = SubResource( 4 )
+material = SubResource( 6 )
 margin_left = -0.529739
 margin_top = 0.535563
 margin_right = 321.47
@@ -454,7 +454,7 @@ margin_left = -131.0
 margin_top = -34.5
 margin_right = 130.0
 margin_bottom = 10.5
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "Game Over"
 scroll_active = false
 __meta__ = {
@@ -470,7 +470,7 @@ margin_left = -86.8106
 margin_top = 15.1045
 margin_right = 110.189
 margin_bottom = 55.1045
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "Score: 0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -485,7 +485,7 @@ margin_left = -102.0
 margin_top = 41.2258
 margin_right = 102.0
 margin_bottom = 81.2258
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "press ESC to restart"
 
 [node name="gameoveraudio" type="AudioStreamPlayer" parent="GameOver"]
