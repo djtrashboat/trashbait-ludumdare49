@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/awake.wav-6b8730b70b65f48296075b0c1794ca37.sample"
+
+[deps]
+
+source_file="res://sounds/awake.wav"
+dest_files=[ "res://.import/awake.wav-6b8730b70b65f48296075b0c1794ca37.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
